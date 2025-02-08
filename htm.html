@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Animation</title>
+    <style>
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            20% {
+                transform: translateY(-10px);
+            }
+            40% {
+                transform: translateY(5px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+            80% {
+                transform: translateY(2px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Spinner styles */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        h5 {
+           /* font-size: ; */
+            font-weight: bold;
+            color: #333;
+            animation: fadeIn 2s ease-out, bounce 1s ease-out;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .spinner {
+            position: absolute;
+            width: 92px;
+            height: 92px;
+            border: 5px solid #f3f3f3; /* Light gray background */
+            border-top: 5px solid #3498db; /* Blue color for the spinner */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            z-index: 1;
+            margin-top: -105px;
+            margin-left: -4px;
+        }
+
+        @media (max-width: 768px) {
+          
+            .welcome{
+            position: absolute;
+              margin-top: 100%;
+         }
+        }
+
+        @media (max-width: 480px) {
+           
+            .welcome{
+            position: absolute;
+              margin-top: 100%;
+         }
+        }
+       img{
+           width: 100px;
+           height: 100px;
+              margin-left: 1%;
+       }
+         .welcome{
+            position: absolute;
+              margin-top: 10%;
+         }
+    </style>
+</head>
+<body>
+   
+  
+   <div class="main">
+    <img src="icon3.png" alt="" srcset="">
+    <div class="spinner"></div>
+   </div>
+    <!-- <div class="welcome"> <h5>Welcome to Converter Website</h5></div> -->
+
+    <script>
+        //Hide the spinner and redirect to the home page after 3 seconds
+        setTimeout(function() {
+            document.querySelector(".spinner").style.display = "none";  // Hide the spinner
+            window.location.href = "home.html";  // Replace 'home.html' with your actual home page URL
+        }, 4000);
+    </script>
+</body>
+</html>

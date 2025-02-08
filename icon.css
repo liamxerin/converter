@@ -1,0 +1,35 @@
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    /* background-color: #fff; */
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 130px;
+    /* background-color: #e0e0e0; */
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.icon:hover {
+    transform: scale(1.1);
+    /* background-color: #d0d0d0; */
+}
+.icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.icon-label {
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: center;
+}
